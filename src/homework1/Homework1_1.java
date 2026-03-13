@@ -16,7 +16,7 @@ public class Homework1_1 {
 
         int a = 4 * (b + c - 1) / 2;
 
-        System.out.println(a);
+        System.out.println("4*(" + b + "+" + c + "-1)/2 = " + a);
 
     }
 }
