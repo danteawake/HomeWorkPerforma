@@ -10,7 +10,6 @@ public class Homework1_3 {
      */
 
     public static void main(String[] args) {
-
         int n = 365;
 
         int firstDigit = n / 100;
@@ -21,6 +20,5 @@ public class Homework1_3 {
 
         System.out.println("Sum of digits of a number " + n + " " +
                 "= " + result + " (" + firstDigit + " + " + secondDigit + " + " + thirdDigit + ")");
-
     }
 }

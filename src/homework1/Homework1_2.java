@@ -10,7 +10,6 @@ public class Homework1_2 {
      */
 
     public static void main(String[] args) {
-
         int n = 57;
 
         int firstDigit = n / 10;
@@ -19,6 +18,5 @@ public class Homework1_2 {
 
         System.out.println("Sum of digits of a number " + n + " " +
                 "= " + result + " (" + firstDigit + " + " + secondDigit + ")");
-
     }
 }

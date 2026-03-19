@@ -10,13 +10,11 @@ public class Homework1_4 {
      */
 
     public static void main(String[] args) {
-
         double n = 3532.545345;
 
         int roundUp = (int) ((n * 10) % 10) / 5;
         int result = (int) (n + roundUp);
 
         System.out.println("Nearest integer to " + n + " = " + result);
-
     }
 }

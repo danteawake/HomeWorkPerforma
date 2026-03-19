@@ -11,7 +11,6 @@ public class Homework1_5 {
      */
 
     public static void main(String[] args) {
-
         int q = 20;
         int w = 6;
 
@@ -19,6 +18,5 @@ public class Homework1_5 {
         int division = q / w;
 
         System.out.println(q + " / " + w + " = " + division + " и " + nod + " в остатке");
-
     }
 }
