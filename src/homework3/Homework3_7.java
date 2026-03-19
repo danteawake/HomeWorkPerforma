@@ -33,18 +33,29 @@ public class Homework3_7 {
         }
         System.out.println("Input: " + Arrays.toString(array));
 
-        for (int i = array.length - 1; i >= 0; i--) {
-            array[i] += 1;
-            if ((array[i] - 1) != 9) {
-                break;
-            }
-            array[i] = 0;
-        }
+        boolean isFirstDigitZero = false; //проверка на случай если в массиве первый элемент 0
         if (array[0] == 0) {
-            array = new int[array.length + 1];
-            array[0] = 1;
+            isFirstDigitZero = true;
         }
 
-        System.out.println("Output: " + Arrays.toString(array));
+        for (int i = array.length - 1; i >= 0; i--) { //Если переполнения не происходит - не продолжаем
+            array[i] += 1;
+            if (array[i] < 10) {
+                break;
+            }
+            array[i] = 0; //Если переполнение происходит - ставим 0 и продолжаем со след элемента
+        }
+        // если изначально первый элемент не был 0, но стал им после всех циклов - создаем новый на 1 больше и копируем
+        if (!isFirstDigitZero && array[0] == 0) {
+            int[] arrayNew = new int[array.length + 1];
+            for (int i = 0; i < array.length; i++) {
+                arrayNew[i+1] = array[i];
+            }
+            arrayNew[0] = 1;
+            System.out.println("Output: " + Arrays.toString(arrayNew));
+        } else {
+            System.out.println("Output: " + Arrays.toString(array));
+        }
     }
 }
+
