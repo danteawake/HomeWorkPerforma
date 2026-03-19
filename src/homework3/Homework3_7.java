@@ -35,7 +35,7 @@ public class Homework3_7 {
 
         for (int i = array.length - 1; i >= 0; i--) {
             array[i] += 1;
-            if ((array[i] - 1) % 10 != 9 || (array[i] - 1) != 9) {
+            if ((array[i] - 1) != 9) {
                 break;
             }
             array[i] = 0;
