@@ -20,25 +20,25 @@ public class Practice3_3 {
         //3.1
         Scanner scanner = new Scanner(System.in);
         int arrayLength = scanner.nextInt();
-        double[] arrayDouble = new double[arrayLength];
+        double[] masDouble = new double[arrayLength];
 
         //3.2
         Random random = new Random();
-        for (int i = 0; i < arrayDouble.length; i++) {
-            arrayDouble[i] = random.nextDouble(10.0);
+        for (int i = 0; i < masDouble.length; i++) {
+            masDouble[i] = random.nextDouble(10.0);
         }
-        System.out.println(Arrays.toString(arrayDouble));
+        System.out.println(Arrays.toString(masDouble));
 
         //3.3
-        for (int i = 0; i < arrayDouble.length; i++) {
-            if ((i + 1) % 2 == 0) {
-                arrayDouble[i] *= arrayDouble[i];
+        for (int i = 0; i < masDouble.length; i++) {
+            if ((int) masDouble[i] % 2 == 0 && (int) masDouble[i] > 1) {
+                masDouble[i] *= masDouble[i];
             }
         }
-        System.out.println(Arrays.toString(arrayDouble));
+        System.out.println(Arrays.toString(masDouble));
 
-        for (int i = arrayDouble.length - 1; i >= 0; i--) {
-            System.out.print(arrayDouble[i] + " ");
+        for (int i = masDouble.length - 1; i >= 0; i--) {
+            System.out.print(masDouble[i] + " ");
         }
     }
 }
