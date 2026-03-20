@@ -20,7 +20,7 @@ public class Practice3_5 {
         int[][] twoDimArray = new int[number][number];
         for (int i = 0; i < twoDimArray.length; i++) {
             for (int j = 0; j < twoDimArray[i].length; j++) {
-                twoDimArray[i][j] = random.nextInt(51);
+                twoDimArray[i][j] = random.nextInt(4);
                 if (twoDimArray[i][j] < 10) {
                     System.out.print(twoDimArray[i][j] + "  ");
                 } else {
@@ -30,14 +30,13 @@ public class Practice3_5 {
             System.out.println();
         }
 
+        System.out.println("All odd number under main diagonal inclusive: ");
         for (int i = 0; i < twoDimArray.length; i++) {
             for (int j = 0; j < twoDimArray[i].length; j++) {
-                if (j <= i) {
-                    sum += twoDimArray[i][j];
+                if (j <= i && twoDimArray[i][j] % 2 != 0) {
+                    System.out.print(twoDimArray[i][j] + " ");
                 }
             }
         }
-
-        System.out.println("Sum of number under main diagonal inclusive = " + sum);
     }
 }
