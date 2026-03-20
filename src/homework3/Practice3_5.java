@@ -20,7 +20,7 @@ public class Practice3_5 {
         int[][] twoDimArray = new int[number][number];
         for (int i = 0; i < twoDimArray.length; i++) {
             for (int j = 0; j < twoDimArray[i].length; j++) {
-                twoDimArray[i][j] = random.nextInt(4);
+                twoDimArray[i][j] = random.nextInt(51);
                 if (twoDimArray[i][j] < 10) {
                     System.out.print(twoDimArray[i][j] + "  ");
                 } else {
