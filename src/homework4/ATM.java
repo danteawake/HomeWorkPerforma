@@ -21,9 +21,9 @@ public class ATM {
     }
 
     public boolean withdraw(int sum) {
-        int countOf100sWithdraw;
-        int countOf50sWithdraw;
-        int countOf20sWithdraw;
+        int countOf100sWithdraw = 0;
+        int countOf50sWithdraw = 0;
+        int countOf20sWithdraw = 0;
         int originalSum = sum;
         boolean isOk = true;
 
@@ -60,10 +60,17 @@ public class ATM {
         } else {
             isOk = false;
         }
-       if (sum > 0){
-           System.out.println("Amount withdraw - "+ (originalSum-sum));
-           System.out.println("Funds not issued - "+sum+". No exchange");
-       }
+        if (sum > 0) {
+            System.out.println("Amount withdraw - " + (originalSum - sum));
+            System.out.println("Funds not issued - " + sum + ". No exchange");
+
+        } else {
+            System.out.println("Amount withdraw - " + originalSum);
+        }
+        System.out.println("Issued in banknotes:");
+        System.out.println("100s - " + countOf100sWithdraw);
+        System.out.println("50s - " + countOf50sWithdraw);
+        System.out.println("20s - " + countOf20sWithdraw);
         return isOk;
     }
 
