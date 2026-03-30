@@ -23,9 +23,9 @@ public class ATM {
 
     public boolean withdraw(int sum) {
         System.out.println("------------------------------------");
-        int countOf100sWithdraw = 0; // количество купюр, которое надо вывести в идеале (если они есть)
-        int countOf50sWithdraw = 0;
-        int countOf20sWithdraw = 0;
+        int countOf100sWithdraw; // количество купюр, которое надо вывести в идеале (если они есть)
+        int countOf50sWithdraw;
+        int countOf20sWithdraw;
         int countOf100sWithdrawPossible = 0; // количество купюр, которое будет выведено пользователю при успешной выдаче
         int countOf50sWithdrawPossible = 0;
         int countOf20sWithdrawPossible = 0;
@@ -33,8 +33,8 @@ public class ATM {
         int originalSum = sum;
         boolean isOk = true;
 
-        /**
-         * Если в методе {@link #checkSum(int sum)} прошли все проверки, тогда логика снятия отработает
+        /*
+          Если в методе checkSum(int sum) прошли все проверки, тогда логика снятия отработает
          */
         if (checkSum(sum)) {
             countOf100sWithdraw = sum / HUNDRED;
@@ -106,7 +106,7 @@ public class ATM {
      * Больше ли сумма минимальной банкноты (20)
      * Больше ли сумма минимально возможной выдачи {@link #minBalance()}
      *
-     * @param sum
+     * @param sum сумма для проверки относительно баланса
      * @return true - если все проверки успешны
      */
     private boolean checkSum(int sum) {
@@ -127,10 +127,8 @@ public class ATM {
     }
 
     /**
-     * Метод возвращает минимально возможную сумму для выдачи, допустим если в банкомате нет купюр 20, а пользователь
-     * хочет вывести 40
-     *
-     * @return
+     * @return возвращает минимально возможную сумму для выдачи, допустим если в банкомате нет купюр 20, а пользователь
+     * * хочет вывести 40
      */
     private int minBalance() {
         int minBalance = 0;
