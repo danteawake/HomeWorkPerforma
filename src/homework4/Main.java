@@ -33,11 +33,11 @@ public class Main {
 //        creditCard2.addBalance();
 //        creditCard3.reduceBalance();
         //-------------------------------------------------------------------
-        ATM atm = new ATM(0,100,200);
+        ATM atm = new ATM(1,2,3);
         atm.checkBalance();
-        atm.addBalance(1,60,300);
-        atm.checkBalance();
-        atm.withdraw(230);
+//        atm.addBalance(1,60,300);
+//        atm.checkBalance();
+        atm.withdraw(378);
         atm.checkBalance();
     }
 }
