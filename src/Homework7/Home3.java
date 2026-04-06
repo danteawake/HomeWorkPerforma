@@ -11,7 +11,6 @@ public class Home3 {
      */
 
     public static void main(String[] args) {
-
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter first line");
         String firstLine = scanner.nextLine();
