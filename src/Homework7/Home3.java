@@ -23,7 +23,7 @@ public class Home3 {
         int averageLength = Math.toIntExact
                 (Math.round((firstLine.length() + secondLine.length() + thirdLine.length()) / 3.0));
 
-        String[] strings = {firstLine, secondLine, firstLine};
+        String[] strings = {firstLine, secondLine, thirdLine};
         System.out.println("Average length - " + averageLength);
         for (String s : strings) {
             if (s.length() < averageLength) {
