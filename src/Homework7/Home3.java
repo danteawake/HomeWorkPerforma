@@ -20,35 +20,10 @@ public class Home3 {
         System.out.println("Enter third line");
         String thirdLine = scanner.nextLine();
 
-        String min = firstLine;
-        if (secondLine.length() < min.length()) {
-            min = secondLine;
-        }
-        if (thirdLine.length() < min.length()) {
-            min = thirdLine;
-        }
-
-        String max = firstLine;
-        if (secondLine.length() > max.length()) {
-            max = secondLine;
-        }
-        if (thirdLine.length() > max.length()) {
-            max = thirdLine;
-        }
-
-        String mid;
-        if (firstLine != min && firstLine != max) {
-            mid = firstLine;
-        } else if (secondLine != min && secondLine != max) {
-            mid = secondLine;
-        } else {
-            mid = thirdLine;
-        }
-
         int averageLength = Math.toIntExact
                 (Math.round((firstLine.length() + secondLine.length() + thirdLine.length()) / 3.0));
 
-        String[] strings = {min, mid, max};
+        String[] strings = {firstLine, secondLine, firstLine};
         System.out.println("Average length - " + averageLength);
         for (String s : strings) {
             if (s.length() < averageLength) {
