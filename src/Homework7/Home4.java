@@ -22,11 +22,11 @@ public class Home4 {
         String[] strings = {firstLine, secondLine, thirdLine};
         StringBuilder sb = new StringBuilder();
 
-        for (int i = 0; i <= strings.length - 1; i++) {
+        for (int i = 0; i < strings.length; i++) {
             String[] words = strings[i].split(" ");    //в цикле идем по слова в строке и создаем массив слов через пробел
             boolean found = false; //если нашли
 
-            for (int j = 0; j <= words.length - 1; j++) {    //идем по массиву слов
+            for (int j = 0; j < words.length; j++) {    //идем по массиву слов
                 String word = words[j];
                 boolean isCharsDifferent = true; //если слово из разных букв
 
